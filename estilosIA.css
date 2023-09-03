@@ -1,0 +1,226 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+main {
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+section {
+    padding: 20px;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+section.section-index{
+    text-align: start;
+    padding: 0;
+    padding-top: 2rem;
+}
+
+/* Estilos para la sección de plantas */
+#plantas label {
+    font-weight: bold;
+}
+
+#plantas select {
+    margin: 10px 0;
+}
+
+#plantas-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+
+.planta {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ddd;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Agrega estilos para las imágenes dentro de .planta */
+.planta img {
+    max-width: 100%; /* Limita el ancho de la imagen al 100% del contenedor */
+    height: 300px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
+    text-align: center; /* Centra el contenido dentro de cada planta */
+    object-fit: cover;
+}
+
+.planta a{
+    padding-top: 1em;
+}
+
+#categorias {
+    padding: 5px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+#categorias option {
+    background-color: #333;
+    color: white;
+}
+
+#categorias:focus {
+    outline: none;
+}
+
+ul.dropdown ul.submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.dropdown ul.submenu li {
+    display: block;
+    padding: 10px;
+    width: 100%; /* Asegura que los elementos del submenú tengan el mismo ancho que el submenú */
+}
+
+/* Muestra el submenú al hacer hover sobre "Categoría" */
+ul.dropdown li.category:hover ul.submenu {
+    display: block;
+}
+
+/* Estilos para la categoría "Interior" */
+.categoria-interior {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para la categoría "Exterior" */
+.categoria-exterior {
+    background-color: #e0e0e0;
+}
+
+#enunciado {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* Color de fondo igual al header */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Estilos para el copyright */
+#current-year {
+    font-weight: bold;
+}
+
+/* Media queries para responsiveness */
+@media (max-width: 768px) {
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        padding-top: 0.3rem;
+    }
+    /* Estilos para pantallas más pequeñas, como tablets */
+    #plantas-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Estilos para pantallas pequeñas, como teléfonos móviles */
+    #plantas-container {
+        grid-template-columns: 1fr;
+    }
+}
